@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Exeter Investment Society — Phillips Exeter Academy</title>
+<link rel="icon" href="Assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -46,7 +47,6 @@
 
   .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
 
-  /* ---------- NAV ---------- */
   header{
     position:fixed;top:0;left:0;right:0;z-index:100;
     background:rgba(10,10,10,0.82);
@@ -75,7 +75,6 @@
   .nav-cta:hover{background:var(--green);color:var(--black) !important;}
   .menu-btn{display:none;background:none;border:none;color:var(--paper);cursor:pointer;}
 
-  /* ---------- HERO ---------- */
   .hero{
     position:relative;
     min-height:100vh;
@@ -132,7 +131,6 @@
   }
   @keyframes float{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(6px);}}
 
-  /* ---------- TICKER ---------- */
   .ticker{
     border-top:1px solid var(--line);border-bottom:1px solid var(--line);
     background:var(--panel);
@@ -149,7 +147,6 @@
   .ticker-item .up{color:var(--green-bright);}
   @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-  /* ---------- SECTION SCAFFOLD ---------- */
   section{padding:120px 0;}
   .section-head{max-width:640px;margin-bottom:64px;}
   .section-head .eyebrow{margin-bottom:16px;}
@@ -157,7 +154,6 @@
   .section-head p{margin-top:18px;color:var(--paper-dim);font-size:15.5px;line-height:1.7;}
   hr.rule{border:none;border-top:1px solid var(--line);margin:0;}
 
-  /* ---------- ABOUT ---------- */
   .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:start;}
   .about-copy p{color:var(--paper-dim);font-size:16px;line-height:1.85;margin-bottom:20px;}
   .about-copy p:last-child{margin-bottom:0;}
@@ -167,7 +163,6 @@
   .stat-num{font-family:'Fraunces',serif;font-size:40px;color:var(--green-bright);font-weight:500;}
   .stat-label{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey);margin-top:6px;}
 
-  /* ---------- OPPORTUNITIES ---------- */
   .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   .prog-card{background:var(--black);padding:36px 30px;transition:background .25s ease;}
   .prog-card:hover{background:var(--panel);}
@@ -175,7 +170,6 @@
   .prog-card h3{font-size:21px;color:var(--paper);margin-bottom:12px;font-weight:500;}
   .prog-card p{font-size:14.5px;color:var(--grey);line-height:1.7;}
 
-  /* ---------- LEADERS ---------- */
   .leaders-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   .leaders-card{background:var(--black);padding:30px 24px;}
   .leaders-photo{
@@ -188,7 +182,6 @@
   .leaders-name{font-size:16px;color:var(--paper);font-weight:600;}
   .leaders-role{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey);margin-top:6px;}
 
-  /* ---------- EVENTS ---------- */
   .timeline{position:relative;padding-left:32px;}
   .timeline::before{
     content:'';position:absolute;left:0;top:6px;bottom:6px;width:1px;
@@ -205,7 +198,6 @@
   .tl-desc{font-size:14.5px;color:var(--grey);margin-top:8px;line-height:1.7;max-width:520px;}
   .tl-meta{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--paper-dim);margin-top:10px;}
 
-  /* ---------- RESOURCES ---------- */
   .res-list{border-top:1px solid var(--line);}
   .res-item{
     display:flex;align-items:center;justify-content:space-between;gap:24px;
@@ -218,7 +210,6 @@
   .res-title{font-size:18px;color:var(--paper);transition:color .2s ease;flex:1;}
   .res-arrow{color:var(--grey);font-size:18px;}
 
-  /* ---------- JOIN ---------- */
   .join{
     background:var(--panel);
     border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -233,7 +224,6 @@
   .info-val{margin-top:6px;font-size:16px;color:var(--paper);}
   .info-val a:hover{color:var(--green-bright);}
 
-  /* ---------- FOOTER ---------- */
   footer{padding:56px 0 40px;}
   .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
   .foot-brand{font-family:'Fraunces',serif;font-size:17px;color:var(--paper-dim);}
@@ -242,7 +232,6 @@
   .foot-links a:hover{color:var(--paper);}
   .foot-copy{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--grey);margin-top:28px;}
 
-  /* ---------- REVEAL ---------- */
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
   .reveal.in{opacity:1;transform:translateY(0);}
 
@@ -253,7 +242,6 @@
     html{scroll-behavior:auto;}
   }
 
-  /* ---------- RESPONSIVE ---------- */
   @media (max-width:900px){
     .navlinks{display:none;}
     .menu-btn{display:block;}
@@ -321,6 +309,7 @@
     <div class="section-head reveal">
       <span class="eyebrow">01 — About</span>
       <h2>Markets, taught by students,<br>for students.</h2>
+    </div>
     <div class="about-grid">
       <div class="about-copy reveal">
         <p>We run weekly meetings that include market news, company analyses, open floor stock pitches, competition preparation, and slideshow presentation — open to all. Members who want to get more involved can join our competition teams and create pitches to present to the society or to competition committees.</p>
@@ -532,7 +521,6 @@
 </footer>
 
 <script>
-  // Ticker content, duplicated for seamless loop
   const items = [
     { text: "NEXT MEETING · MON 6:00 PM · EPAC FORUM", up:false },
     { text: "70+ ACTIVE MEMBERS", up:true },
@@ -554,7 +542,6 @@
   }
   buildTicker();
 
-  // Reveal on scroll
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
