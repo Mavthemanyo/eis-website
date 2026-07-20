@@ -167,7 +167,7 @@
   .stat-num{font-family:'Fraunces',serif;font-size:40px;color:var(--green-bright);font-weight:500;}
   .stat-label{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey);margin-top:6px;}
 
-  /* ---------- PROGRAMS ---------- */
+  /* ---------- OPPORTUNITIES ---------- */
   .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   .prog-card{background:var(--black);padding:36px 30px;transition:background .25s ease;}
   .prog-card:hover{background:var(--panel);}
@@ -175,18 +175,18 @@
   .prog-card h3{font-size:21px;color:var(--paper);margin-bottom:12px;font-weight:500;}
   .prog-card p{font-size:14.5px;color:var(--grey);line-height:1.7;}
 
-  /* ---------- TEAM ---------- */
-  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-  .team-card{background:var(--black);padding:30px 24px;}
-  .team-photo{
+  /* ---------- LEADERS ---------- */
+  .leaders-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .leaders-card{background:var(--black);padding:30px 24px;}
+  .leaders-photo{
     width:56px;height:56px;border-radius:50%;
     background:var(--green-deep);
     display:flex;align-items:center;justify-content:center;
     font-family:'Fraunces',serif;color:var(--green-bright);font-size:18px;
     margin-bottom:20px;
   }
-  .team-name{font-size:16px;color:var(--paper);font-weight:600;}
-  .team-role{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey);margin-top:6px;}
+  .leaders-name{font-size:16px;color:var(--paper);font-weight:600;}
+  .leaders-role{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey);margin-top:6px;}
 
   /* ---------- EVENTS ---------- */
   .timeline{position:relative;padding-left:32px;}
@@ -259,12 +259,12 @@
     .menu-btn{display:block;}
     .about-grid{grid-template-columns:1fr;gap:48px;}
     .prog-grid{grid-template-columns:1fr;}
-    .team-grid{grid-template-columns:1fr 1fr;}
+    .leaders-grid{grid-template-columns:1fr 1fr;}
     .join-inner{grid-template-columns:1fr;gap:44px;}
     section{padding:80px 0;}
   }
   @media (max-width:560px){
-    .team-grid{grid-template-columns:1fr;}
+    .leaders-grid{grid-template-columns:1fr;}
     .hero{padding-top:120px;}
     .wrap{padding:0 22px;}
     .res-item{flex-wrap:wrap;}
@@ -278,8 +278,8 @@
     <a href="#" class="brand"><span class="mark">EIS</span> · Exeter Investment Society</a>
     <div class="navlinks">
       <a href="#about">About</a>
-      <a href="#programs">Programs</a>
-      <a href="#team">Team</a>
+      <a href="#opportunities">Opportunities</a>
+      <a href="#leaders">Board</a>
       <a href="#events">Events</a>
       <a href="#resources">Resources</a>
       <a href="#join" class="nav-cta">Join EIS</a>
@@ -303,7 +303,7 @@
         <path d="M37 2 L44 2 L44 9" stroke="#7ac95f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
-    <p class="hero-sub">A student-run society for anyone at Exeter curious about markets — from first-time investors to seasoned stock pitchers. We read the tape, debate the thesis, and manage a real student-run portfolio together.</p>
+    <p class="hero-sub">We are the premier high school investment club in the country, focused on value and growth driven strategies in public equities.</p>
     <div class="hero-actions">
       <a href="#join" class="btn btn-primary">Join the society</a>
       <a href="#events" class="btn btn-ghost">See upcoming events</a>
@@ -321,20 +321,18 @@
     <div class="section-head reveal">
       <span class="eyebrow">01 — About</span>
       <h2>Markets, taught by students,<br>for students.</h2>
-      <p>EIS started as a handful of preps trading paper portfolios in the Elm Street common room. Today it's Exeter's home for market literacy — a place to learn how capital actually moves, and to test your own thinking against people who'll happily tell you why you're wrong.</p>
-    </div>
     <div class="about-grid">
       <div class="about-copy reveal">
-        <p>We run weekly meetings that mix market news, company deep-dives, and open debate — no finance background required. Members who want to go further can join our stock pitch teams, sit on the portfolio committee, or represent Exeter at regional case competitions.</p>
-        <p>The society is entirely member-managed. Officers are elected each spring, meeting topics are member-proposed, and the student-run portfolio is voted on by the group — every position sized and defended in front of your peers before a dollar moves.</p>
+        <p>We run weekly meetings that include market news, company analyses, open floor stock pitches, competition preparation, and slideshow presentation — open to all. Members who want to get more involved can join our competition teams and create pitches to present to the society or to competition committees.</p>
+        <p>The society is completely member-managed. Coheads are elected each spring, meeting topics are member-proposed, and the student-run investment simulator is accessible to all — no investing knowledge required. </p>
       </div>
       <div class="stat-list reveal">
         <div class="stat">
-          <div class="stat-num">180+</div>
+          <div class="stat-num">70+</div>
           <div class="stat-label">Active members</div>
         </div>
         <div class="stat">
-          <div class="stat-num">$25K</div>
+          <div class="stat-num">$TBD</div>
           <div class="stat-label">Student-managed portfolio</div>
         </div>
         <div class="stat">
@@ -348,43 +346,43 @@
 
 <hr class="rule">
 
-<section id="programs">
+<section id="opportunities">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">02 — Programs</span>
+      <span class="eyebrow">02 — Opportunities</span>
       <h2>Four ways to get involved.</h2>
-      <p>Come for one meeting or dive into all of it — every track is open to every member, every term.</p>
+      <p>Come for one meeting or come for all — every meeting is open to every member, every term.</p>
     </div>
     <div class="prog-grid reveal">
       <div class="prog-card">
         <div class="prog-index">01</div>
-        <h3>Stock Pitch Teams</h3>
-        <p>Small teams research a company, build a thesis, and pitch it live to the club — winning pitches get added to the portfolio watchlist.</p>
+        <h3>Stock Pitches</h3>
+        <p>Individuals or small teams research a company, build a thesis, and pitch it live to the club.</p>
       </div>
       <div class="prog-card">
         <div class="prog-index">02</div>
-        <h3>Speaker Series</h3>
-        <p>Alumni in finance and investing join us throughout the year for candid conversations about markets, careers, and mistakes worth learning from.</p>
+        <h3>Speakers</h3>
+        <p>Alumni or Faculty in finance and investing join us throughout the year for conversations about markets, careers, and adivce worth absorbing.</p>
       </div>
       <div class="prog-card">
         <div class="prog-index">03</div>
         <h3>Trading Simulation</h3>
-        <p>A running paper-trading competition open to all members, with a leaderboard and a small prize for the strongest term.</p>
+        <p>A digital trading competition open to all members hosted each term, with a leaderboard and a small prize for the individual with the most capital at the end of the term.</p>
       </div>
       <div class="prog-card">
         <div class="prog-index">04</div>
-        <h3>Case Competitions</h3>
-        <p>We field teams for regional investment and case competitions each year, coached by our senior analysts.</p>
+        <h3>Competitions</h3>
+        <p>We send teams to prestigious investment and pitch competitions each year.</p>
       </div>
       <div class="prog-card">
         <div class="prog-index">05</div>
         <h3>Portfolio Committee</h3>
-        <p>A rotating group of members who track, debate, and vote on every position in the society's real student-managed fund.</p>
+        <p>TBD.</p>
       </div>
       <div class="prog-card">
         <div class="prog-index">06</div>
-        <h3>Market Digest</h3>
-        <p>A member-written weekly digest covering the news, moves, and numbers worth knowing before Thursday's meeting.</p>
+        <h3>Social Media</h3>
+        <p>A member-run social media account which focuses on current events, club events, and merch drops.</p>
       </div>
     </div>
   </div>
@@ -392,18 +390,18 @@
 
 <hr class="rule">
 
-<section id="team">
+<section id="leaders">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">03 — Team</span>
-      <h2>This year's officers.</h2>
-      <p>Elected each spring by the general membership. Reach out to any officer with questions about meetings, pitches, or joining a committee.</p>
+      <span class="eyebrow">03 — Leaders</span>
+      <h2>The 2026 Board</h2>
+      <p>Elected each spring by the previous coheads via application. Reach out to any cohead with questions about meetings, pitches, or joining a competition team.</p>
     </div>
-    <div class="team-grid reveal">
-      <div class="team-card"><div class="team-name">Maverick Hilal</div><div class="team-role">Cohead</div></div>
-      <div class="team-card"><div class="team-name">Lake Zhou</div><div class="team-role">Cohead</div></div>
-      <div class="team-card"><div class="team-name">Drona Goddam</div><div class="team-role">Cohead</div></div>
-      <div class="team-card"><div class="team-name">Henry Hazelton</div><div class="team-role">Cohead</div></div>
+    <div class="leaders-grid reveal">
+      <div class="leaders-card"><div class="leaders-name">Maverick Hilal</div><div class="leaders-role">Cohead</div></div>
+      <div class="leaders-card"><div class="leaders-name">Lake Zhou</div><div class="leaders-role">Cohead</div></div>
+      <div class="leaders-card"><div class="leaders-name">Drona Goddam</div><div class="leaders-role">Cohead</div></div>
+      <div class="leaders-card"><div class="leaders-name">Henry Hazelton</div><div class="leaders-role">Cohead</div></div>
     </div>
   </div>
 </section>
@@ -414,33 +412,33 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">04 — Events</span>
-      <h2>What's coming up.</h2>
-      <p>Meetings are every Thursday. Larger events are listed below — full details go out on our mailing list.</p>
+      <h2>Around the Corner</h2>
+      <p>Meetings are every Monday. Larger events are listed below — full details go out on our mailing list.</p>
     </div>
     <div class="timeline reveal">
       <div class="tl-item">
-        <div class="tl-date">Thu · Weekly</div>
+        <div class="tl-date">Mon · Weekly</div>
         <div class="tl-title">General Meeting</div>
         <div class="tl-desc">Market recap, an open debate topic, and a short member-led presentation.</div>
-        <div class="tl-meta">6:00 PM — Phelps Science Center, Room 301</div>
+        <div class="tl-meta">6:00 PM — EPAC Forum</div>
       </div>
       <div class="tl-item">
-        <div class="tl-date">March 14</div>
-        <div class="tl-title">Spring Stock Pitch Competition</div>
-        <div class="tl-desc">Teams pitch a long or short thesis to a panel of alumni judges; the winning pitch joins the watchlist.</div>
-        <div class="tl-meta">7:00 PM — Elm Street Dining Hall</div>
+        <div class="tl-date">TBD</div>
+        <div class="tl-title">TBD</div>
+        <div class="tl-desc">TBD</div>
+        <div class="tl-meta">TBD</div>
       </div>
       <div class="tl-item">
-        <div class="tl-date">April 4</div>
-        <div class="tl-title">Alumni Speaker Night: Careers in Markets</div>
-        <div class="tl-desc">Three EIS alumni now working in investing return to talk about their paths and take questions.</div>
-        <div class="tl-meta">6:30 PM — Assembly Hall</div>
+        <div class="tl-date">TBD</div>
+        <div class="tl-title">TBD</div>
+        <div class="tl-desc">TBD</div>
+        <div class="tl-meta">TBD</div>
       </div>
       <div class="tl-item">
-        <div class="tl-date">May 9</div>
-        <div class="tl-title">Trading Simulation Finals</div>
-        <div class="tl-desc">The term's paper-trading leaderboard closes out with a final debrief and awards.</div>
-        <div class="tl-meta">6:00 PM — Phelps Science Center, Room 301</div>
+        <div class="tl-date">TBD</div>
+        <div class="tl-title">TBD</div>
+        <div class="tl-desc">TBD</div>
+        <div class="tl-meta">TBD</div>
       </div>
     </div>
   </div>
@@ -453,37 +451,32 @@
     <div class="section-head reveal">
       <span class="eyebrow">05 — Resources</span>
       <h2>Start learning anytime.</h2>
-      <p>Guides and reading our officers put together for members at every level — no meeting required.</p>
+      <p>Guides and slides coheads have put together for members at every level — no meeting required.</p>
     </div>
     <div class="res-list reveal">
       <a class="res-item" href="#">
-        <span class="res-title">Investing 101: A Beginner's Guide</span>
+        <span class="res-title">EIS Slides</span>
         <span class="res-tag">Guide</span>
         <span class="res-arrow">→</span>
       </a>
       <a class="res-item" href="#">
-        <span class="res-title">How to Build a Stock Pitch</span>
-        <span class="res-tag">Guide</span>
+        <span class="res-title">2025 HUCP Pitch Competition slide deck</span>
+        <span class="res-tag">Pitch</span>
         <span class="res-arrow">→</span>
       </a>
       <a class="res-item" href="#">
-        <span class="res-title">Reading a 10-K Without Falling Asleep</span>
-        <span class="res-tag">Guide</span>
+        <span class="res-title">TBD</span>
+        <span class="res-tag">TBD</span>
         <span class="res-arrow">→</span>
       </a>
       <a class="res-item" href="#">
-        <span class="res-title">Intro to Financial Modeling</span>
-        <span class="res-tag">Workshop</span>
+        <span class="res-title">TBD</span>
+        <span class="res-tag">TBD</span>
         <span class="res-arrow">→</span>
       </a>
       <a class="res-item" href="#">
-        <span class="res-title">EIS Recommended Reading List</span>
-        <span class="res-tag">Reading</span>
-        <span class="res-arrow">→</span>
-      </a>
-      <a class="res-item" href="#">
-        <span class="res-title">This Week's Market Digest</span>
-        <span class="res-tag">Newsletter</span>
+        <span class="res-title">TBD</span>
+        <span class="res-tag">TBD</span>
         <span class="res-arrow">→</span>
       </a>
     </div>
@@ -495,8 +488,8 @@
     <div class="join-inner">
       <div class="reveal">
         <span class="eyebrow">06 — Join</span>
-        <h2>Bring your first thesis to Thursday's meeting.</h2>
-        <p>No experience, major, or portfolio required — just curiosity. New members are welcome at any point in the year.</p>
+        <h2>Bring your ideas to Monday's meeting.</h2>
+        <p>No experience, knowledge, or capital required — just curiosity. New members are welcome to join at any point in the year.</p>
         <div class="hero-actions" style="justify-content:flex-start;margin-top:36px;">
           <a href="mailto:mhilal@exeter.edu" class="btn btn-primary">Email us to join</a>
         </div>
@@ -504,7 +497,7 @@
       <div class="join-info reveal">
         <div class="info-row">
           <div class="info-label">Meetings</div>
-          <div class="info-val">Thursdays, 6:00 PM — Phelps Science Center, Room 301</div>
+          <div class="info-val">Mondays, 6:00 PM — EPAC Forum</div>
         </div>
         <div class="info-row">
           <div class="info-label">Contact</div>
@@ -512,11 +505,11 @@
         </div>
         <div class="info-row">
           <div class="info-label">Mailing list</div>
-          <div class="info-val"><a href="#">Sign up for weekly updates →</a></div>
+          <div class="info-val"><a href="#">Sign up for updates →</a></div>
         </div>
         <div class="info-row">
           <div class="info-label">Faculty advisor</div>
-          <div class="info-val">Name Surname, Department</div>
+          <div class="info-val">TBD</div>
         </div>
       </div>
     </div>
@@ -541,13 +534,13 @@
 <script>
   // Ticker content, duplicated for seamless loop
   const items = [
-    { text: "NEXT MEETING · THU 6:00 PM · PHELPS 301", up:false },
-    { text: "180+ ACTIVE MEMBERS", up:true },
-    { text: "STUDENT PORTFOLIO · $25,000 AUM", up:true },
-    { text: "STOCK PITCH COMPETITION · MAR 14", up:false },
+    { text: "NEXT MEETING · MON 6:00 PM · EPAC FORUM", up:false },
+    { text: "70+ ACTIVE MEMBERS", up:true },
+    { text: "PORTFOLIO · TBD", up:true },
+    { text: "STOCK PITCH COMPETITION · TBD", up:false },
     { text: "FOUNDED 2021", up:false },
-    { text: "ALUMNI SPEAKER NIGHT · APR 4", up:false },
-    { text: "TRADING SIM FINALS · MAY 9", up:true },
+    { text: "SPEAKER NIGHT · TBD", up:false },
+    { text: "TRADING SIM WINNERS · TBD", up:true },
   ];
   const track = document.getElementById('tickerTrack');
   function buildTicker(){
