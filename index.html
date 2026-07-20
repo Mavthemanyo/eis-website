@@ -73,7 +73,23 @@
     transition:background .2s ease, color .2s ease;
   }
   .nav-cta:hover{background:var(--green);color:var(--black) !important;}
-  .menu-btn{display:none;background:none;border:none;color:var(--paper);cursor:pointer;}
+  .menu-btn{display:none;background:none;border:none;color:var(--paper);cursor:pointer;font-size:20px;}
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    background:var(--black);
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-menu a{
+    padding:16px 32px;
+    font-size:14px;
+    color:var(--paper-dim);
+    border-top:1px solid var(--line);
+  }
+  .mobile-menu a.nav-cta{
+    color:var(--green-bright) !important;
+  }
+  .mobile-menu.open{display:flex;}
 
   .hero{
     position:relative;
@@ -245,6 +261,7 @@
   @media (max-width:900px){
     .navlinks{display:none;}
     .menu-btn{display:block;}
+    .mobile-menu.open{display:flex;}
     .about-grid{grid-template-columns:1fr;gap:48px;}
     .prog-grid{grid-template-columns:1fr;}
     .leaders-grid{grid-template-columns:1fr 1fr;}
@@ -272,8 +289,16 @@
       <a href="#resources">Resources</a>
       <a href="#join" class="nav-cta">Join EIS</a>
     </div>
-    <button class="menu-btn" aria-label="Menu">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">☰</button>
   </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#opportunities">Opportunities</a>
+    <a href="#leaders">Leaders</a>
+    <a href="#events">Events</a>
+    <a href="#resources">Resources</a>
+    <a href="#join" class="nav-cta">Join EIS</a>
+  </div>
 </header>
 
 <section class="hero">
@@ -542,6 +567,22 @@
     track.innerHTML = html;
   }
   buildTicker();
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', ()=>{
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+    menuBtn.textContent = isOpen ? '✕' : '☰';
+  });
+  mobileMenu.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click', ()=>{
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.textContent = '☰';
+    });
+  });
 
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
