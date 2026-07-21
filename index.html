@@ -379,6 +379,8 @@
 </section>
 
 <hr class="rule">
+<div class="ticker"><div class="ticker-track" id="stockTrack1"></div></div>
+
 
 <section id="opportunities">
   <div class="wrap">
@@ -423,6 +425,8 @@
 </section>
 
 <hr class="rule">
+<div class="ticker"><div class="ticker-track" id="clubTrack2"></div></div>
+
 
 <section id="leaders">
   <div class="wrap">
@@ -441,6 +445,8 @@
 </section>
 
 <hr class="rule">
+<div class="ticker"><div class="ticker-track" id="stockTrack2"></div></div>
+
 
 <section id="events">
   <div class="wrap">
@@ -479,6 +485,8 @@
 </section>
 
 <hr class="rule">
+<div class="ticker"><div class="ticker-track" id="clubTrack3"></div></div>
+
 
 <section id="resources">
   <div class="wrap">
@@ -568,7 +576,7 @@
 </footer>
 
 <script>
-  const items = [
+  const clubItems = [
     { text: "NEXT MEETING · MON 6:00 PM · EPAC FORUM", up:false },
     { text: "80+ ACTIVE MEMBERS", up:true },
     { text: "PORTFOLIO · TBD", up:true },
@@ -577,17 +585,45 @@
     { text: "SPEAKER NIGHT · TBD", up:false },
     { text: "TRADING SIM WINNERS · TBD", up:true },
   ];
-  const track = document.getElementById('tickerTrack');
-  function buildTicker(){
+
+  function renderTrack(el, items){
+    if(!el) return;
     let html = '';
     for(let r=0;r<2;r++){
       items.forEach(it=>{
         html += `<span class="ticker-item">${it.up ? '<span class="up">▲</span>' : ''}${it.text}</span>`;
       });
     }
-    track.innerHTML = html;
+    el.innerHTML = html;
   }
-  buildTicker();
+
+  const clubTrackIds = ['tickerTrack','clubTrack2','clubTrack3'];
+  const stockTrackIds = ['stockTrack1','stockTrack2'];
+
+  clubTrackIds.forEach(id=>renderTrack(document.getElementById(id), clubItems));
+  stockTrackIds.forEach(id=>renderTrack(document.getElementById(id), [{ text: "LOADING MARKET DATA…", up:false }]));
+
+  // Live stock quotes via Finnhub
+  const FINNHUB_KEY = 'd9fd1vpr01qu5nhe0hngd9fd1vpr01qu5nhe0ho0';
+  const TICKERS = ['AAPL','MSFT','NVDA','SPY'];
+
+  async function fetchQuotes(){
+    try{
+      const results = await Promise.all(TICKERS.map(async sym=>{
+        const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${sym}&token=${FINNHUB_KEY}`);
+        if(!res.ok) throw new Error('Finnhub request failed: ' + res.status);
+        const data = await res.json();
+        if(typeof data.c !== 'number' || data.c === 0) throw new Error('Unexpected response for ' + sym);
+        return { text: `${sym} $${data.c.toFixed(2)} ${data.dp >= 0 ? '+' : ''}${data.dp.toFixed(2)}%`, up: data.dp >= 0 };
+      }));
+      stockTrackIds.forEach(id=>renderTrack(document.getElementById(id), results));
+    }catch(e){
+      console.error('Stock ticker error:', e);
+      stockTrackIds.forEach(id=>renderTrack(document.getElementById(id), [{ text: "MARKET DATA UNAVAILABLE", up:false }]));
+    }
+  }
+  fetchQuotes();
+  setInterval(fetchQuotes, 60000);
 
   // Mobile menu toggle
   const menuBtn = document.getElementById('menuBtn');
