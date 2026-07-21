@@ -586,11 +586,20 @@
     { text: "TRADING SIM WINNERS · TBD", up:true },
   ];
 
+  function padItems(items, minLen){
+    let out = [...items];
+    while(out.length < minLen){
+      out = out.concat(items);
+    }
+    return out;
+  }
+
   function renderTrack(el, items){
     if(!el) return;
+    const padded = padItems(items, 7);
     let html = '';
     for(let r=0;r<2;r++){
-      items.forEach(it=>{
+      padded.forEach(it=>{
         html += `<span class="ticker-item">${it.up ? '<span class="up">▲</span>' : ''}${it.text}</span>`;
       });
     }
