@@ -238,6 +238,20 @@
   .res-title{font-size:18px;color:var(--paper);transition:color .2s ease;flex:1;}
   .res-arrow{color:var(--grey);font-size:18px;}
 
+  .merch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  .merch-card{border:1px solid var(--line);}
+  .merch-img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;filter:grayscale(0.15);}
+  .merch-body{padding:22px;}
+  .merch-name{font-size:17px;color:var(--paper);font-weight:600;}
+  .merch-price{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--green-bright);margin-top:6px;}
+  .merch-desc{font-size:13.5px;color:var(--grey);margin-top:10px;line-height:1.6;}
+  @media (max-width:900px){
+    .merch-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    .merch-grid{grid-template-columns:1fr;}
+  }
+
   .join{
     background:var(--panel);
     border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -299,6 +313,7 @@
       <a href="#leaders">Leaders</a>
       <a href="#events">Events</a>
       <a href="#resources">Resources</a>
+      <a href="merch.html">Merch</a>
       <a href="https://www.instagram.com/exeter.investment.society/" target="_blank" rel="noopener" aria-label="Instagram" class="ig-link">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
@@ -316,6 +331,7 @@
     <a href="#leaders">Leaders</a>
     <a href="#events">Events</a>
     <a href="#resources">Resources</a>
+    <a href="merch.html">Merch</a>
     <a href="https://www.instagram.com/exeter.investment.society/" target="_blank" rel="noopener">Instagram</a>
     <a href="#join" class="nav-cta">Join EIS</a>
   </div>
@@ -363,7 +379,7 @@
       <div class="stat-list reveal">
         <div class="stat">
           <div class="stat-num">100+</div>
-          <div class="stat-label">Members</div>
+          <div class="stat-label">Active members</div>
         </div>
         <div class="stat">
           <div class="stat-num">$TBD</div>
@@ -412,7 +428,7 @@
       </div>
       <div class="prog-card">
         <div class="prog-index">05</div>
-        <h3>Portfolio Management</h3>
+        <h3>Portfolio Committee</h3>
         <p>TBD.</p>
       </div>
       <div class="prog-card">
@@ -459,7 +475,7 @@
       <div class="tl-item">
         <div class="tl-date">Mon · Weekly</div>
         <div class="tl-title">General Meeting</div>
-        <div class="tl-desc">Market recap, pitches, and a short presentation.</div>
+        <div class="tl-desc">Market recap, an open debate topic, and a short member-led presentation.</div>
         <div class="tl-meta">6:00 PM — EPAC Forum</div>
       </div>
       <div class="tl-item">
@@ -525,11 +541,36 @@
   </div>
 </section>
 
+<section id="merch">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">06 — Merch</span>
+      <h2>Wear the tape.</h2>
+      <p>All proceeds support society events and competition travel. Order through the form — payment is handled in person.</p>
+    </div>
+    <div class="merch-grid reveal">
+      <div class="merch-card">
+        <img class="merch-img" src="Assets/hoodie_merch.jpg" alt="EIS hoodie with Academy Building crest and Invest. Learn. Grow. tagline">
+        <div class="merch-body">
+          <div class="merch-name">EIS Hoodie</div>
+          <div class="merch-price">$TBD</div>
+          <div class="merch-desc">Heavyweight hoodie with the Academy Building crest and "Invest. Learn. Grow." across the front.</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-actions" style="justify-content:flex-start;margin-top:44px;">
+      <a href="https://forms.gle/5QnrexUdfFGFLchJ9" target="_blank" rel="noopener" class="btn btn-primary">Order merch</a>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
 <section id="join" class="join">
   <div class="wrap">
     <div class="join-inner">
       <div class="reveal">
-        <span class="eyebrow">06 — Join</span>
+        <span class="eyebrow">07 — Join</span>
         <h2>Bring your ideas to Monday's meeting.</h2>
         <p>No experience, knowledge, or capital required — just curiosity. New members are welcome to join at any point in the year.</p>
         <div class="hero-actions" style="justify-content:flex-start;margin-top:36px;">
@@ -578,7 +619,7 @@
 <script>
   const clubItems = [
     { text: "NEXT MEETING · MON 6:00 PM · EPAC FORUM", up:false },
-    { text: "100+ MEMBERS", up:true },
+    { text: "100+ ACTIVE MEMBERS", up:true },
     { text: "PORTFOLIO · TBD", up:true },
     { text: "STOCK PITCH COMPETITION · TBD", up:false },
     { text: "FOUNDED 2021", up:false },
