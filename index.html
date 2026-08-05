@@ -159,6 +159,8 @@
   .btn-primary:hover{background:var(--green-bright);}
   .btn-ghost{border:1px solid var(--line-strong);color:var(--paper);}
   .btn-ghost:hover{border-color:var(--green-bright);color:var(--green-bright);}
+  .btn-compete{background:#c23b3b;color:var(--paper);}
+  .btn-compete:hover{background:#e04b4b;}
 
   .scroll-cue{
     position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
@@ -247,6 +249,19 @@
   .res-title{font-size:18px;color:var(--paper);transition:color .2s ease;flex:1;}
   .res-arrow{color:var(--grey);font-size:18px;}
 
+  .comp-list{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);}
+  .comp-card{background:var(--black);padding:30px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+  .comp-main{flex:1;min-width:240px;}
+  .comp-deadline{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--green-bright);}
+  .comp-name{font-size:19px;color:var(--paper);margin-top:8px;font-weight:500;}
+  .comp-desc{font-size:14px;color:var(--grey);margin-top:8px;line-height:1.65;max-width:520px;}
+  .comp-btn{flex-shrink:0;}
+  @media (max-width:560px){
+    .comp-card{flex-direction:column;}
+    .comp-btn{width:100%;}
+    .comp-btn .btn{width:100%;text-align:center;}
+  }
+
   .merch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
   .merch-card{border:1px solid var(--line);}
   .merch-img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;filter:grayscale(0.15);}
@@ -322,6 +337,13 @@
       <a href="#leaders">Leaders</a>
       <a href="#events">Events</a>
       <a href="#resources">Resources</a>
+      <a href="#competitions" class="nav-merch">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 21h8M12 17v4M6 4h12v3a6 6 0 0 1-12 0V4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Competitions
+      </a>
       <a href="merch.html" class="nav-merch">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 8h12l-1 12H7L6 8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
@@ -346,6 +368,7 @@
     <a href="#leaders">Leaders</a>
     <a href="#events">Events</a>
     <a href="#resources">Resources</a>
+    <a href="#competitions" style="color:var(--green-bright);">Competitions</a>
     <a href="merch.html" style="color:var(--green-bright);">Merch</a>
     <a href="https://www.instagram.com/exeter.investment.society/" target="_blank" rel="noopener">Instagram</a>
     <a href="#join" class="nav-cta">Join EIS</a>
@@ -371,6 +394,7 @@
     <div class="hero-actions">
       <a href="#join" class="btn btn-primary">Join the society</a>
       <a href="#events" class="btn btn-ghost">See upcoming events</a>
+      <a href="#competitions" class="btn btn-compete">Compete</a>
     </div>
   </div>
   <div class="scroll-cue">SCROLL ↓</div>
@@ -494,10 +518,10 @@
         <div class="tl-meta">6:00 PM — EPAC Forum</div>
       </div>
       <div class="tl-item">
-        <div class="tl-date">TBD</div>
-        <div class="tl-title">TBD</div>
-        <div class="tl-desc">TBD</div>
-        <div class="tl-meta">TBD</div>
+        <div class="tl-date">Sep 11</div>
+        <div class="tl-title">Wharton Global Youth Investment Competition — Registration Deadline</div>
+        <div class="tl-desc">Sign up to compete in Wharton's global investment competition as part of an EIS team. Register before the deadline.</div>
+        <div class="tl-meta"><a href="https://forms.gle/aFppfpepZqu4b1Y98" target="_blank" rel="noopener" style="color:var(--green-bright);">Sign up here →</a></div>
       </div>
       <div class="tl-item">
         <div class="tl-date">TBD</div>
@@ -518,11 +542,35 @@
 <hr class="rule">
 <div class="ticker"><div class="ticker-track" id="clubTrack3"></div></div>
 
+<section id="competitions">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">05 — Competitions</span>
+      <h2>Compete under EIS.</h2>
+      <p>Registration links and deadlines for every competition we partake in.</p>
+    </div>
+    <div class="comp-list reveal">
+      <div class="comp-card">
+        <div class="comp-main">
+          <div class="comp-deadline">Registration Deadline · Sep 11</div>
+          <div class="comp-name">Wharton Global Youth Investment Competition</div>
+          <div class="comp-desc">A national investing competition for high school students, run by the Wharton School. Sign up to join an EIS team.</div>
+        </div>
+        <div class="comp-btn">
+          <a href="https://forms.gle/aFppfpepZqu4b1Y98" target="_blank" rel="noopener" class="btn btn-primary">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+<div class="ticker"><div class="ticker-track" id="stockTrack3"></div></div>
 
 <section id="resources">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">05 — Resources</span>
+      <span class="eyebrow">06 — Resources</span>
       <h2>Start learning anytime.</h2>
       <p>Guides and slides coheads have put together for members at every level — no meeting required.</p>
     </div>
@@ -557,12 +605,13 @@
 </section>
 
 <hr class="rule">
+<div class="ticker"><div class="ticker-track" id="clubTrack4"></div></div>
 
 <section id="join" class="join">
   <div class="wrap">
     <div class="join-inner">
       <div class="reveal">
-        <span class="eyebrow">06 — Join</span>
+        <span class="eyebrow">07 — Join</span>
         <h2>Bring your ideas to Monday's meeting.</h2>
         <p>No experience, knowledge, or capital required — just curiosity. New members are welcome to join at any point in the year.</p>
         <div class="hero-actions" style="justify-content:flex-start;margin-top:36px;">
@@ -599,6 +648,7 @@
       <div class="foot-links">
         <a href="#about">About</a>
         <a href="#events">Events</a>
+        <a href="#competitions">Competitions</a>
         <a href="#resources">Resources</a>
         <a href="mailto:mhilal@exeter.edu">Contact</a>
         <a href="https://www.instagram.com/exeter.investment.society/" target="_blank" rel="noopener">Instagram</a>
@@ -639,8 +689,8 @@
     el.innerHTML = html;
   }
 
-  const clubTrackIds = ['tickerTrack','clubTrack2','clubTrack3'];
-  const stockTrackIds = ['stockTrack1','stockTrack2'];
+  const clubTrackIds = ['tickerTrack','clubTrack2','clubTrack3','clubTrack4'];
+  const stockTrackIds = ['stockTrack1','stockTrack2','stockTrack3'];
 
   clubTrackIds.forEach(id=>renderTrack(document.getElementById(id), clubItems));
   stockTrackIds.forEach(id=>renderTrack(document.getElementById(id), [{ text: "LOADING MARKET DATA…", up:false }]));
